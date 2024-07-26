@@ -2,6 +2,9 @@
     text-shadow: 2px 2px 2px rgba(221, 216, 216, 0.5);
 }
 
-button {
-    align-items: center;
-}
+ul.collapsible.fa-border {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 3px solid #000; /* Bold border */
+    font-family: Arial, sans-serif;
