@@ -12,7 +12,35 @@
     {% endblock %}
 </head>
 <body>
-
+    <header>
+        <!--Top Navbar-->
+        <nav class="nav-extended text-shadow orange darken-4">
+            <div class="nav-wrapper">
+              <a href="{{ url_for('get_recipes') }}" class="brand-logo">Recipe Manager</a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="{{ url_for ('get_recipes') }}">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">New Recipe</a></li>
+                <li><a href="#">Log Out</a></li>
+                <li><a href="#">Log In</a></li>
+                <li><a href="#">Register</a></li>
+              
+                
+              </ul>
+            </div>
+          </nav>
+          <!--mobile sideview-->
+          <ul class="sidenav" id="mobile-demo">
+                <li><h4 class="center-align orange-text text-darken 4"> Recipe Manager</h4></li>
+                <li><a href="{{ url_for ('get_recipes') }}">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">New Recipe</a></li>
+                <li><a href="#">Log Out</a></li>
+                <li><a href="#">Log In</a></li>
+                <li><a href="#">Register</a></li>
+          </ul>
+    </header>
    
     {% block content %}
     {% endblock %}
