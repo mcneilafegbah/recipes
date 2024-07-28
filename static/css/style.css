@@ -1,29 +1,12 @@
+body, html {
+  font-family: 'Roboto', sans-serif;
+}
+
 .text-shadow {
-    text-shadow: 2px 2px 2px rgba(221, 216, 216, 0.5);
+    text-shadow: 2px 2px 2px rgba(204, 24, 24, 0.5);
 }
 
-ul.collapsible.fa-border {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    border: 3px solid #363636; /* Bold border */
-    font-family: Arial, sans-serif;
-}
 
-.drinks_cards {
-        border: 1px solid rgb(12, 12, 12);
-      }
-
-
-/* General styles for the collapsible list */
-ul.collapsible.drinks_cards {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    border: 3px solid #302f2f; /* Bold border */
-    font-family: Arial, sans-serif; /* Change font */
-  }
-  
   /* Styles for each list item */
   ul.collapsible.drinks_cards li {
     border-top: 1px solid #e6e3e3;
@@ -90,8 +73,9 @@ ul.collapsible.drinks_cards {
   text-align: center;
 }
 .custom-header-background {
-  background-color: #ffcc80; /* Light orange background */
-  padding: 10px; /* Add some padding */
+ 
+  color: rgb(255, 0, 0);
+   padding: 40px; /* Add some padding */
   border-radius: 5px; /* Optional: Add rounded corners */
   margin-bottom: 10px; /* Add some space between items */
 }
@@ -108,4 +92,31 @@ ul.collapsible.drinks_cards {
   padding: 20px; /* Add some padding */
   border-radius: 5px; /* Optional: Add rounded corners */
   margin-bottom: 20px; /* Add some space below */
+}
+
+
+/* Navigation Bar Links */
+.nav-wrapper ul li a {
+  font-weight: bold;
+  color: #fff;
+  padding: 0 20px;
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-wrapper ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffeb3b;
+  border-radius: 4px;
+}
+
+/* Brand Logo */
+.brand-logo {
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Sidenav Trigger */
+.sidenav-trigger {
+  color: #fff;
 }

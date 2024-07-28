@@ -83,7 +83,7 @@ def add_recipe():
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
             "recipe_about": request.form.get("recipe_about"),
-            "recipe_ingredient": [ingredient.strip() for ingredient in ingredients if ingredient.strip()],
+           "recipe_ingredient": [ingredient.strip() for ingredient in ingredients if ingredient.strip()],
             "recipe_direction": [direction.strip() for direction in directions if direction.strip()],
             "cooktime": request.form.get("cooktime"),
             "servings": request.form.get("servings"),

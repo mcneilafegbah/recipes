@@ -31,4 +31,13 @@ $(document).ready(function(){
             }
         });
     }
+
+    $('.btn-delete').on('click', function(e) {
+        e.preventDefault();
+        const url = $(this).attr('href');
+        if (confirm('Are you sure you want to delete this recipe?')) {
+            window.location.href = url;
+        }
+    });
+
 });
