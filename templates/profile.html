@@ -12,4 +12,71 @@
         </div>
     </div>
 
+
+   
+    {% if recipes %}
+    <ul class="collapsible drinks_cards">
+        {% for recipe in recipes %}
+            <!-- RECIPE NAME AND TYPE -->
+            <li>
+                <div class="collapsible-header col s9 custom-header-background">
+                    Name: <strong>{{ recipe.recipe_name|title }} | </strong>
+                    Type: <strong>{{ recipe.category_name|title }} | </strong>
+                    Added by: <strong>{{ recipe.created_by|title }} </strong>
+                </div>
+            </li>
+
+            <!-- DISPLAY INGREDIENTS -->
+            <li>
+                <!-- INGREDIENTS HEADER -->
+                <div class="collapsible-header">
+                    <i class="fas fa-shopping-cart"></i> Ingredients
+                </div>
+                <!-- INGREDIENTS BODY -->
+                <div class="collapsible-body">  
+                    <ul>
+                        {% for ingredient in recipe.recipe_ingredient %}
+                            <li>- {{ ingredient|title }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </li>
+
+            <!-- INSTRUCTIONS -->
+            <li>
+                <!-- INSTRUCTIONS HEADER -->
+                <div class="collapsible-header">
+                    <i class="fa-solid fa-list"></i> Instructions
+                </div>
+                <!-- INSTRUCTIONS BODY -->
+                <div class="collapsible-body">
+                    <!-- PREP TIME AND ICON -->
+                    <div class="row preperation_row">
+                        <span><i class="fa-sharp-duotone fa-solid fa-circle-xmark"></i> Preparation time: {{ recipe.cooktime }} minutes</span>
+                    </div>
+                    <!-- SERVES AND ICON -->
+                    <div class="row">
+                        <span><i class="fa-regular fa-face-smile"></i> Serves: {{ recipe.servings }} persons</span>
+                    </div>
+                    <!-- INSTRUCTIONS INDIVIDUALLY -->
+                    <ol class="ol_instructions">
+                        {% for instruction in recipe.recipe_direction %}
+                            <li>{{ instruction|title }}</li>
+                        {% endfor %}
+                    </ol>
+                </div>
+            </li>
+
+            <div class="col 3">
+                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small green accent-4">Delete</a>
+                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small dark-blue lighten-1">Edit</a>
+            </div>
+        {% endfor %}
+    </ul>
+{% else %}
+    <div class="orange-boxed-border">
+        <h3 class="orange-text bold text-darken-4 center-align">No Recipes Found</h3>
+    </div>
+{% endif %}
+
 {% endblock %}

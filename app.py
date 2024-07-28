@@ -63,9 +63,9 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    username = mongo.db.users.find_one({"username": session["user"]})["username"]
-    if session["user"]:
-        return render_template("profile.html", username=username)
+    if "user" in session:
+        user_recipes = list(mongo.db.recipes.find({"created_by": session["user"]}))
+        return render_template("profile.html", username=username, recipes=user_recipes)
     return redirect(url_for("login"))
 
 @app.route("/logout")
