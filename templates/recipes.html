@@ -1,17 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h3 class="light-blue-text text-darken-4 center-align">All Recipes</h3>
+
 <ul class="collapsible drinks_cards">
     {% for recipe in recipes %}
         
         <!-- DRINK NAME AND TYPE -->
         <li>
-            <div class="collapsible-header s12">
+           
+
+            <div class="collapsible-header col s9">
                 <i class=""></i> 
                 Name: <strong>{{ recipe.recipe_name|title }} | </strong>
                 Type: <strong>{{ recipe.category_name|title }} | </strong>
                 Added by: <strong>{{ recipe.created_by|title }} </strong>
             </div>
+            
         </li>
 
         <!-- DISPLAY INGREDIENTS -->
@@ -56,7 +61,11 @@
                     {% endfor %}
                 </ol>
             </div>
+            <i class="fas fa-caret-down"></i>
+            <a href="" class="btn-small green accent-4">Done</a>
+            <a href="" class="btn-small dark-blue lighten-1">Edit</a>
         </li>
+             
       
     {% endfor %}
 </ul>

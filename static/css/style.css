@@ -70,3 +70,14 @@ ul.collapsible.drinks_cards {
     background-color: #e0e0e0;
   }
   
+
+  .btn-small {
+    margin: 10px;
+    background-color: #1a237e;
+    width: 100px;
+}
+
+.collapsible-header .col strong {
+    margin: 10px;
+    line-height: 42px;
+}
