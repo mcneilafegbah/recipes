@@ -101,12 +101,14 @@ def logout():
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
+        ingredients = request.form.get("recipe_ingredient").split('\n')
+        directions = request.form.get("recipe_direction").split('\n')
         recipe = {
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
             "recipe_about": request.form.get("recipe_about"),
-            "recipe_ingredient": request.form.get("recipe_ingredient"),
-            "recipe_direction": request.form.get("recipe_direction"), 
+            "recipe_ingredient": [ingredient.strip() for ingredient in ingredients if ingredient.strip()],
+            "recipe_direction": [direction.strip() for direction in directions if direction.strip()],
             "cooktime": request.form.get("cooktime"),
             "servings": request.form.get("servings"),
             "created_by": session["user"]
@@ -121,10 +123,27 @@ def add_recipe():
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
+    if request.method == "POST":
+        ingredients = request.form.get("recipe_ingredient").split('\n')
+        directions = request.form.get("recipe_direction").split('\n')
+        recipe = {
+            "category_name": request.form.get("category_name"),
+            "recipe_name": request.form.get("recipe_name"),
+            "recipe_about": request.form.get("recipe_about"),
+            "recipe_ingredient": [ingredient.strip() for ingredient in ingredients if ingredient.strip()],
+            "recipe_direction": [direction.strip() for direction in directions if direction.strip()],
+            "cooktime": request.form.get("cooktime"),
+            "servings": request.form.get("servings"),
+            "created_by": session["user"]
+        }
+        mongo.db.recipes.update_one({"_id": ObjectId(recipe_id)}, {"$set": recipe})
+        flash("Recipe Successfully Updated")
+        return redirect(url_for("get_recipes"))
+
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_recipe.html", recipe=recipe, categories=categories)
-
+    
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

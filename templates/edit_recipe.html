@@ -24,42 +24,42 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-pencil-alt prefix orange-text text-darken-4"></i>
-                <input id="recipe_name" name="recipe_name" minlength="3" maxlength="50" value="{{ recipe.recipe_name}}"type="text" class="validate" required>
+                <input id="recipe_name" name="recipe_name" minlength="3" maxlength="50" value="{{ recipe.recipe_name }}" type="text" class="validate" required>
                 <label for="recipe_name">Recipe Name</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-align-left prefix orange-text text-darken-4"></i>
-                <textarea id="recipe_about" name="recipe_about" minlength="5" maxlength="200" class="materialize-textarea">{{ recipe.recipe_about}}</textarea>
+                <textarea id="recipe_about" name="recipe_about" minlength="5" maxlength="200" class="materialize-textarea">{{ recipe.recipe_about }}</textarea>
                 <label for="recipe_about">About the recipe</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-cookie-bite prefix orange-text text-darken-4"></i>
-                <textarea id="recipe_ingredient" name="recipe_ingredient" minlength="5" maxlength="1000" class="materialize-textarea">{{- recipe.recipe_ingredient-}}</textarea>
+                <textarea id="recipe_ingredient" name="recipe_ingredient" minlength="5" maxlength="1000" class="materialize-textarea">{{ recipe.recipe_ingredient }}</textarea>
                 <label for="recipe_ingredient">Ingredients</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-list prefix orange-text text-darken-4"></i>
-                <textarea id="recipe_direction" name="recipe_direction" minlength="5" maxlength="2000"class="materialize-textarea">{{- recipe.recipe_direction }}</textarea>
+                <textarea id="recipe_direction" name="recipe_direction" minlength="5" maxlength="2000" class="materialize-textarea">{{ recipe.recipe_direction }}</textarea>
                 <label for="recipe_direction">Recipe Instructions</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-timeline prefix orange-text text-darken-4"></i>
-                <input id="cooktime" name="cooktime" minlength="1" maxlength="3" type="number" value="{{ recipe.cooktime}}" class="validate" required>
+                <input id="cooktime" name="cooktime" minlength="1" maxlength="3" type="number" value="{{ recipe.cooktime }}" class="validate" required>
                 <label for="cooktime">Cook time (minutes)</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-person prefix orange-text text-darken-4"></i>
-                <input id="servings" name="servings" minlength="1" maxlength="4" type="number" value="{{ recipe.servings}}" class="validate" required>
+                <input id="servings" name="servings" minlength="1" maxlength="4" type="number" value="{{ recipe.servings }}" class="validate" required>
                 <label for="servings">Number of Servings</label>
             </div>
         </div>

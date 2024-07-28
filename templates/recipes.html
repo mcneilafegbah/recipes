@@ -8,14 +8,9 @@
         
         <!-- DRINK NAME AND TYPE -->
         <li>
-            <div class="col 3">
-            <i class="fas fa-caret-down"></i>
-            <a href="" class="btn-small green accent-4">Delete</a>
-            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id)}}" class="btn-small dark-blue lighten-1">Edit</a>
             
-            </div>
             <div class="collapsible-header col s9">
-                <i class=""></i> 
+                
                 Name: <strong>{{ recipe.recipe_name|title }} | </strong>
                 Type: <strong>{{ recipe.category_name|title }} | </strong>
                 Added by: <strong>{{ recipe.created_by|title }} </strong>
@@ -33,7 +28,7 @@
             <!-- INGREDIENTS BODY -->
             <div class="collapsible-body">  
                 <ul>
-                    {% for ingredient in recipe.recipe_ingredient.splitlines() %}
+                    {% for ingredient in recipe.recipe_ingredient %}
                         <li>- {{ ingredient|title }}</li>
                     {% endfor %}
                 </ul>
@@ -60,7 +55,7 @@
                 </div>
                 <!-- INSTRUCTIONS INDIVIDUALLY -->
                 <ol class="ol_instructions">
-                    {% for instruction in recipe.recipe_direction.splitlines() %}
+                    {% for instruction in recipe.recipe_direction %}
                         <li>{{ instruction|title }}</li>
                     {% endfor %}
                 </ol>
@@ -68,7 +63,13 @@
            
         </li>
              
-      
+        <div class="col 3">
+            
+            {% if session.user|lower == recipe.created_by|lower %}
+                <a href="" class="btn-small green accent-4">Delete</a>
+                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small dark-blue lighten-1">Edit</a>
+            {% endif %}
+            </div>
     {% endfor %}
 </ul>
 
