@@ -73,11 +73,39 @@ ul.collapsible.drinks_cards {
 
   .btn-small {
     margin: 10px;
-    background-color: #1a237e;
+    background-color: #e26f03;
     width: 100px;
 }
 
 .collapsible-header .col strong {
     margin: 10px;
     line-height: 42px;
+}
+
+.orange-boxed-border {
+  border: 2px solid orange;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+  text-align: center;
+}
+.custom-header-background {
+  background-color: #ffcc80; /* Light orange background */
+  padding: 10px; /* Add some padding */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  margin-bottom: 10px; /* Add some space between items */
+}
+
+.orange-boxed-border {
+  border: 2px solid #ff9800; /* Orange border */
+  padding: 20px; /* Add some padding */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  margin-top: 20px; /* Add some space above the box */
+}
+
+.topcol-background-orange {
+  background-color: #ffcc80; /* Light orange background */
+  padding: 20px; /* Add some padding */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  margin-bottom: 20px; /* Add some space below */
 }
