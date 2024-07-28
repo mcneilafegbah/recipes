@@ -1,32 +1,64 @@
 {% extends "base.html" %}
 {% block content %}
 
-   
+<ul class="collapsible drinks_cards">
     {% for recipe in recipes %}
-        {{ recipe.recipe_name }}<br>
-        {{ recipe.category_name }}<br>
-        {{ recipe.recipe_about }}<br>
-        {{ recipe.recipe_ingredient  }}<br>
-        {{ recipe.recipe_direction }}<br>
-        {{ recipe.cooktime }}<br>
-        {{ recipe.servings }}<br>
-    {% endfor %}
-
-
-    <ul class="collapsible fa-border">
+        
+        <!-- DRINK NAME AND TYPE -->
         <li>
-          <div class="collapsible-header darken-4 text-shadow">First</div>
+            <div class="collapsible-header s12">
+                <i class=""></i> 
+                Name: <strong>{{ recipe.recipe_name|title }} | </strong>
+                Type: <strong>{{ recipe.category_name|title }} | </strong>
+                Added by: <strong>{{ recipe.created_by|title }} </strong>
+            </div>
+        </li>
+
+        <!-- DISPLAY INGREDIENTS -->
+        <li>
+            <!-- INGREDIENTS HEADER -->
+            <div class="collapsible-header">
+                <i class="fas fa-shopping-cart"></i> Ingredients
+            </div>
           
+            <!-- INGREDIENTS BODY -->
+            <div class="collapsible-body">  
+                <ul>
+                    {% for ingredient in recipe.recipe_ingredient.splitlines() %}
+                        <li>- {{ ingredient|title }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
         </li>
+        
+        <!-- INSTRUCTIONS -->
         <li>
-          <div class="collapsible-header"><i class="fas fa-caret-right"></i>Second</div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            <!-- INSTRUCTIONS HEADER -->
+            <div class="collapsible-header">
+                <i class="fa-solid fa-list"></i> Instructions
+                <i class=""></i>
+            </div>
+            
+            <!-- INSTRUCTIONS BODY -->
+            <div class="collapsible-body">
+                <!-- PREP TIME AND ICON -->
+                <div class="row preperation_row">
+                    <span><i class="fa-sharp-duotone fa-solid fa-circle-xmark"></i> Preparation time: {{ recipe.cooktime }} minutes</span>
+                </div>
+                <!-- SERVES AND ICON -->
+                <div class="row">
+                    <span><i class="fa-regular fa-face-smile"></i> Serves: {{ recipe.servings }} persons</span>
+                </div>
+                <!-- INSTRUCTIONS INDIVIDUALLY -->
+                <ol class="ol_instructions">
+                    {% for instruction in recipe.recipe_direction.splitlines() %}
+                        <li>{{ instruction|title }}</li>
+                    {% endfor %}
+                </ol>
+            </div>
         </li>
-        <li>
-          <div class="collapsible-header"><i class="fas fa-caret-down"></i>Third</div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-      </ul>
-
       
+    {% endfor %}
+</ul>
+
 {% endblock %}
