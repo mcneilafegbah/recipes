@@ -8,8 +8,12 @@
         
         <!-- DRINK NAME AND TYPE -->
         <li>
-           
-
+            <div class="col 3">
+            <i class="fas fa-caret-down"></i>
+            <a href="" class="btn-small green accent-4">Delete</a>
+            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id)}}" class="btn-small dark-blue lighten-1">Edit</a>
+            
+            </div>
             <div class="collapsible-header col s9">
                 <i class=""></i> 
                 Name: <strong>{{ recipe.recipe_name|title }} | </strong>
@@ -61,9 +65,7 @@
                     {% endfor %}
                 </ol>
             </div>
-            <i class="fas fa-caret-down"></i>
-            <a href="" class="btn-small green accent-4">Done</a>
-            <a href="" class="btn-small dark-blue lighten-1">Edit</a>
+           
         </li>
              
       
