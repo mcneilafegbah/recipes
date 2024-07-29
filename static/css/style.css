@@ -120,3 +120,18 @@ body, html {
 .sidenav-trigger {
   color: #fff;
 }
+
+
+.social-icon {
+  font-size: 3rem; /* Custom size for the icons */
+  margin: 0 10px;  /* Space between icons */
+}
+.page-footer.orange {
+  background-color: #ff9800; /* Orange background color */
+}
+.page-footer a.white-text {
+  color: #fff !important; /* Ensure links in the footer are white */
+}
+.page-footer p {
+  margin: 0;
+}
