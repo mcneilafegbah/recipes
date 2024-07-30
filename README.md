@@ -1,4 +1,3 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 # Recipe Manager,
 <img src="static/images/REcipe.PNG"/>
@@ -143,32 +142,39 @@ As a visitor to Tipsy mac Staggers i want/expect/need:
 * Finally as a user I expect feedback from the website when I interact with it. If i add a food/drink/dessert/snacks, edit a drink, delete a drink or log in and log out i want to see confirmation that this action has been completed successfully.
 
 
-<a href="your-target-link.html"> HomePage Desktop Unregistered</a>
-<a href="your-target-link.html">HomePage Desktop Registered</a>
-<a href="your-target-link.html">HomePage iPad</a>
-<a href="your-target-link.html">HomePage iPhone</a>
+<a href="/static/mock-images/Logged in menu.png"> HomePage Desktop Unregistered</a>
+
+<a href="/static/mock-images/Logged out.png" >HomePage Desktop Registered</a>
+
+<a href="/static/mock-images/Ipad.png">HomePage iPad</a>
+
+<a href="/static/mock-images/Iphone.png">HomePage iPhone</a>
 
 
-<a href="your-target-link.html">Profile Desktop Unregistered</a>
-<a href="your-target-link.html">Profile Page Desktop Registered</a>
-<a href="your-target-link.html">Profile Page iPad</a>
-<a href="your-target-link.html">Profile Page iPhone</a>
 
-<a href="your-target-link.html">Register Page Desktop</a>
-<a href="your-target-link.html">Register Page iPad</a>
-<a href="your-target-link.html">Register Page iPhone</a>
+<a href="/static/mock-images/Profile page desktop.png">Profile Desktop Registered</a>
 
-<a href="your-target-link.html">Login Page Desktop</a>
-<a href="your-target-link.html">Login Page iPad</a>
-<a href="your-target-link.html">Login Page iPhone</a>
+<a href="/static/mock-images/profile page IPAD.png">Profile Page iPad</a>
 
-<a href="your-target-link.html">Profile Page Desktop</a>
-<a href="your-target-link.html">Profile Page iPad</a>
-<a href="your-target-link.html">ProfilePage iPhone</a>
+<a href="/static/mock-images/Iphone profile page.png">Profile Page iPhone</a>
 
-<a href="your-target-link.html">Add Recipe Desktop</a>
-<a href="your-target-link.html">Add Recipe iPad</a>
-<a href="your-target-link.html">Add Recipe iPhone</a>
+
+<a href="/static/mock-images/register page desktop .png">Register Page Desktop</a>
+
+<a href="/static/mock-images/Ipad register.png">Register Page iPad</a>
+
+<a href="/static/mock-images/Iphone register.png">Register Page iPhone</a>
+
+<a href="/static/mock-images/login page desktop .png">Login Page Desktop</a>
+
+<a href="/static/mock-images/Ipad login.png">Login Page iPad</a>
+
+<a href="/static/mock-images/Iphone login.png">Login Page iPhone</a>
+
+
+<a href="/static/mock-images/Add Recipe Desktop.png">Add Recipe Desktop</a>
+<a href="/static/mock-images/Ipad add recipe.png">Add Recipe iPad</a>
+<a href="/static/mock-images/Iphone add recipe.png">Add Recipe iPhone</a>
 
 2.2 - The Navbar
 For the Navbar i decided to use a Materialize mobile collapse navbar. I chose this option because i wanted the Navbar to be responsive on all screen sizes and the Materialize mobile collapse navbar offers this function in a quick and easy way.
