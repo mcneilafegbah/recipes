@@ -216,7 +216,7 @@ At the top of the home page i have created a search bar for users to search for 
 
 Users of the site who register will have the ability to add recipe to the website. The recipe button will only be visible to registered users, none registered users will not have the ability to submit recipes.
 
-<img src="static/images/search.PNG"/>
+<img src="static/images/add-recipe.PNG"/>
 
 The data the site collects from each user uploading a recipe is:
 
@@ -233,17 +233,18 @@ Servings (Number of people)
 
 Any user who has uploaded a recipe to the site will have the ability to edit this recipe at any time they wish, however they must be logged in for this edit button to be displayed (Screenshot below)
 
-<img src="static/images/edit.PNG"/>
+<img src="static/images/edit-recipe.PNG"/>
 
 
 Once the user clicks on the edit recipe button they will be brought to the edit recipe page where all of the recipes information will appear. All this information is pre-populated with the information the user originally entered when they created the recipe (Screenshot below)
 
-<img src="static/images/edit-recipe.PNG"/>
 
-### 2.6 - Delete Drink
+
+### 2.6 - Delete Recipe
 
 Any user who has uploaded a drink to the site will also have the ability to delete this drink at any time, however they must be logged in for this delete button to be displayed (Screenshot below)
 
+<img src="static/images/delete-recipe.PNG"/>
 
 
 ### 2.8 - Log In
@@ -254,7 +255,7 @@ Registered users who are returning to the site will need to log in if they wish 
 I have also added a redirect under the login button. This displays the message to users that if they are new to the site they need to register for an account. The link displayed here will bring them to the user register page.
 
 
-### 2.9 - Log In
+### 2.9 - Profile
 Registered users who are returning to the site will be redirected to their profile page 
 
 <img src="static/images/profile.PNG"/>
